@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Registro de Asistencia - SELECOMNET</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ventana Informativa (Modal) -->
+    <div id="modal-informativo" class="modal-overlay">
+        <div class="modal-contenido">
+            <h3>Indicaciones Convivio 2026 🎄</h3>
+            <div class="modal-texto">
+                <p><strong>Estimados compañeros:</strong></p>
+                <p>Buenos días, reciban un cordial saludo, les comparto las indicaciones a tomar en cuenta y que deben compartir con el personal para evitar inconvenientes para el día <strong>jueves 17/12/2026</strong>:</p>
+                
+                <ol>
+                    <li>Este año se ha organizado Convivio por empresa, éste incluirá únicamente a <strong>Selecomnet (Supervisores, Gestores, Dispatch), Arrendacar y Valav. </strong> </li>
+                    <li>Indicarle a su personal que debe presentarse de particular el día del almuerzo (Horario de Oficina). Si deben atender un cliente por favor, portar su uniforme completo, tomando en cuenta lo siguiente:
+                        <ul>
+                            <li>No usar pantalones rotos ni con decoración.</li>
+                            <li>Utilizar colores suaves, No colores neón.</li>
+                            <li>Faldas a la Rodilla.</li>
+                            <li>Zapato cerrado.</li>
+                        </ul>
+                    </li>
+                    <li>El evento dura 3 horas a partir de la hora indicada en la Invitación, esto significa que no retornaremos a laborar.</li>
+                    <li>El personal de las Sedes que serán partícipes de la actividad deben retirarse de sus instalaciones a las 10:00 am (o lo más temprano posible según su distancia) para estar puntualmente en el <strong>Restaurante Los Cebollines Majadas a las 13:00 horas</strong>.</li>
+                    <li>El personal de la Sede Central puede comenzar a arreglarse a partir de las 11:45 am (no se recomienda ir a su casa por temas de tránsito).</li>
+                    <li>Hay suficiente parqueo en el Restaurante para aquellos que lleven su vehículo.</li>
+                    <li>El Salón Chetumal se encuentra ingresando al Restaurante del lado derecho, al lado del área de juegos.</li>
+                    <li>Es importante que nos confirmen asistencia.</li>
+                </ol>
+                
+                <p class="nota"><strong>Nota:</strong> Por favor compartir la información con todo su personal.<br>
+                Gracias por su amable atención, cualquier duda se pueden comunicar a RRHH.</p>
+                <p class="nota"><strong>Ext.</strong> 22189106.<br>
+                <strong>Email: </strong> angelica.medrano@selecom.com.gt</p>
+            </div>
+            <button id="btn-entendido" class="btn-modal">Entendido, ir al registro</button>
+        </div>
+    </div>
+
+    <div class="contenedor">
+        <!-- Logos de la empresa y RRHH -->
+        <div class="header-logos">
+            <img src="SELECOMNET.png" alt="Logo SELECOMNET" class="logo-principal">
+            <img src="logo-RHH.png" alt="Logo Recursos Humanos" class="logo-rrhh">
+        </div>
+
+        <h2>Confirmación de Asistencia</h2>
+        <p class="instrucciones">Busca tu nombre y confirma tu participación.</p>
+
+        <form id="registro-form">
+            <div class="campo">
+                <label for="buscar-nombre">Nombre del colaborador:</label>
+                <input type="text" id="buscar-nombre" placeholder="Empieza a escribir..." autocomplete="off">
+                <ul id="lista-sugerencias" class="oculto"></ul>
+            </div>
+
+            <div class="campo">
+                <label for="area">Área / Departamento:</label>
+                <input type="text" id="area" placeholder="Se llenará sola o puedes escribirla">
+            </div>
+
+            <div class="campo-decision">
+                <p>¿Participarás en el evento?</p>
+                <div class="botones-sino">
+                    <button type="button" class="btn-decision" data-respuesta="Si">SÍ</button>
+                    <button type="button" class="btn-decision" data-respuesta="No">NO</button>
+                </div>
+                <input type="hidden" id="respuesta-final" value="">
+            </div>
+
+            <button type="submit" id="btn-enviar" disabled>Enviar Respuesta</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
